@@ -92,7 +92,7 @@ class _ShoppingScreenState extends State<ShoppingScreen> {
                         ),
                       ),
                       Text(
-                        "About ${shoppingCubit.suggestionList.length.toString()}",
+                        "About ${shoppingCubit.suggestionList.length.toString()} results",
                         style: const TextStyle(fontSize: 16),
                       ),
                     ],

@@ -43,8 +43,8 @@ class _SuggestionTileState extends State<SuggestionTile> {
             child: Row(
               children: [
                 Container(
-                  height: 30,
-                  width: 30,
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
@@ -56,10 +56,12 @@ class _SuggestionTileState extends State<SuggestionTile> {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  widget.name.replaceFirst(
-                      widget.name[0], widget.name[0].toUpperCase()),
-                  style: const TextStyle(color: Colors.white),
+                Flexible(
+                  child: Text(
+                    widget.name.replaceFirst(
+                        widget.name[0], widget.name[0].toUpperCase()),
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
               ],
             ),
