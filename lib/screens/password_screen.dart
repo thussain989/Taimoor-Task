@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taimoor_task/screens/shopping_screen.dart';
 import 'package:taimoor_task/strings/app_strings.dart';
 import 'package:taimoor_task/widgets/primary_textfield.dart';
 import 'package:taimoor_task/widgets/validation_rule.dart';
@@ -108,9 +109,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
                         buttonText: AppStrings.submit,
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
-                            print('Validated');
-                          } else {
-                            print('not validate');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const ShoppingScreen(),
+                              ),
+                            );
                           }
                         },
                       ),

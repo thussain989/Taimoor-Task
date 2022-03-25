@@ -9,6 +9,8 @@ class AppStrings {
   static const valRuleOneSpecialChar = 'At least one special character';
   static const valRuleMinLength = 'A minimum length of 8 character';
   static const passwordIsRequired = 'Password is required';
+  static const shopping = 'Shopping';
+  static const searchResult = 'Search Results';
   static const passwordsDoNotMatch =
       'The password and confirmation password do not match';
 }
