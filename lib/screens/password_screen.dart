@@ -16,6 +16,8 @@ class PasswordScreen extends StatefulWidget {
 class _PasswordScreenState extends State<PasswordScreen> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
+  RegExp regex =
+      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -48,6 +50,8 @@ class _PasswordScreenState extends State<PasswordScreen> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return AppStrings.passwordIsRequired;
+                    } else if (!regex.hasMatch(value)) {
+                      return AppStrings.passwordIsNotValid;
                     }
                   },
                 ),
